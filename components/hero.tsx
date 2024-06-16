@@ -24,9 +24,9 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h1 mb-4" data-aos="fade-up">Bienvenido a 3BSLab</h1>
+            <h1 className="h1 mb-4" data-aos="fade-up">DOMINA EL ARTE DE LA BARBERÍA CON 3BSLab</h1>
             <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">
-              Nuestra academia virtual ofrece cursos completos y contenido exclusivo para barberos, accesible desde cualquier dispositivo.
+            Hemos creado  una comunidad para el conocimiento, el aprendizaje y la experiencia,  para que puedas desarrollarte como Barbero y dominar las técnicas de corte, la redes sociales, el negocio de las Barberías; pero principalmente, crecer como persona.
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">

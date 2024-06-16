@@ -6,8 +6,8 @@ export default function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">Características Destacadas de 3BSLab</h2>
-            <p className="text-xl text-gray-400">Explora las funciones que hacen de nuestra plataforma la mejor opción para barberos profesionales.</p>
+            <h2 className="h2 mb-4">Qué ofrecemos en esta plataforma</h2>
+            <p className="text-xl text-gray-400">Del corte al negocio, de la marca personal a crear tu propio camino.</p>
           </div>
 
           {/* Items */}
@@ -20,8 +20,8 @@ export default function Features() {
                 <path className="stroke-current text-white" d="M30 39.313l-4.18 2.197L27 34.628l-5-4.874 6.91-1.004L32 22.49l3.09 6.26L42 29.754l-3 2.924" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd" />
                 <path className="stroke-current text-gray-400" d="M43 42h-9M43 37h-9" strokeLinecap="square" strokeWidth="2" />
               </svg>
-              <h4 className="h4 mb-2">Cursos Interactivos</h4>
-              <p className="text-lg text-gray-400 text-center">Accede a cursos detallados y dinámicos diseñados para mejorar tus habilidades y técnicas de barbería.</p>
+              <h4 className="h4 mb-2">Experiencia</h4>
+              <p className="text-lg text-gray-400 text-center">Hemos creado y formado personas en diferentes países, en base a la experiencia propia tranferimos ese proceso para que tu puedas aprovecharlo.</p>
             </div>
 
             {/* 2nd item */}
@@ -31,8 +31,8 @@ export default function Features() {
                 <path className="stroke-current text-white" strokeWidth="2" strokeLinecap="square" d="M21 23h22v18H21z" fill="none" fillRule="evenodd" />
                 <path className="stroke-current text-gray-400" d="M26 28h12M26 32h12M26 36h5" strokeWidth="2" strokeLinecap="square" />
               </svg>
-              <h4 className="h4 mb-2">Contenido Exclusivo</h4>
-              <p className="text-lg text-gray-400 text-center">Disfruta de acceso a tutoriales exclusivos, entrevistas con expertos y consejos avanzados de barbería.</p>
+              <h4 className="h4 mb-2">Conocimiento</h4>
+              <p className="text-lg text-gray-400 text-center">Aprender es una decisión de crecimiento personal para lograr tus metas. Te entregamos el conocimiento para que puedas desarrollar tu propio camino.</p>
             </div>
 
             {/* 3rd item */}
@@ -45,8 +45,8 @@ export default function Features() {
                   <circle className="stroke-current text-white" cx="11" cy="11" r="11" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Cobertura Global</h4>
-              <p className="text-lg text-gray-400 text-center">Gracias a nuestros diversos medios de pago, puedes acceder a nuestro contenido desde cualquier parte del mundo.</p>
+              <h4 className="h4 mb-2">Aprendizaje</h4>
+              <p className="text-lg text-gray-400 text-center">Programas de formación integral en áreas de la Barbería. Desde lo básico a la formación de tu propia Barbería.</p>
             </div>
 
             {/* 4th item */}
@@ -58,8 +58,8 @@ export default function Features() {
                   <circle className="stroke-current text-gray-400" cx="13" cy="9" r="3" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Actualizaciones Constantes</h4>
-              <p className="text-lg text-gray-400 text-center">Nuestro contenido se actualiza regularmente para que siempre tengas acceso a las últimas tendencias y técnicas.</p>
+              <h4 className="h4 mb-2">Contenido exclusivo</h4>
+              <p className="text-lg text-gray-400 text-center">Todas las semanas agregamos nuevo contenido para que puedas ir desarrollandote como un profesional de la Barbería, a través de Podcasts, Streamings, demostraciones en vivo  y entrevistas.</p>
             </div>
 
             {/* 5th item */}
@@ -71,8 +71,8 @@ export default function Features() {
                   <path className="stroke-current text-gray-400" d="M22 30h4v12h-4z" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Comunidad Activa</h4>
-              <p className="text-lg text-gray-400 text-center">Únete a una comunidad vibrante de barberos donde puedes compartir conocimientos y experiencias.</p>
+              <h4 className="h4 mb-2">Comunidad</h4>
+              <p className="text-lg text-gray-400 text-center">Ser parte de una comunidad de conocimiento y aprendizaje. No hay límites.... de alumno a formador!</p>
             </div>
 
             {/* 6th item */}
@@ -85,8 +85,8 @@ export default function Features() {
                   <path className="stroke-current text-white" d="M8.86 1.18C3.8 1.988 0 5.6 0 10c0 5 4.9 9 11 9a10.55 10.55 0 003.1-.4L20 21l-.6-5.2a9.125 9.125 0 001.991-2.948" />
                 </g>
               </svg>
-              <h4 className="h4 mb-2">Soporte 24/7</h4>
-              <p className="text-lg text-gray-400 text-center">Recibe asistencia en cualquier momento con nuestro equipo de soporte disponible las 24 horas del día, los 7 días de la semana.</p>
+              <h4 className="h4 mb-2">Desafios</h4>
+              <p className="text-lg text-gray-400 text-center">Se parte de la comunidad de desafios de Barberos, crea, comparte y recibe feedback a través de los Talent Barber.</p>
             </div>
 
           </div>

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home - Open PRO',
+  title: '3BSLab',
   description: 'Page description',
 }
 
@@ -16,8 +16,8 @@ export default function Home() {
       <Hero />
       <Features />
       <Zigzag />
-      <FaqPage/>
       <Testimonials />
+      <FaqPage/>
       <Newsletter />
     </>
   )
