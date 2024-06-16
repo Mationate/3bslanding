@@ -30,7 +30,7 @@ export default function Newsletter() {
             {/* CTA form */}
             <form className="w-full lg:w-1/2">
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                <input type="email" className="w-full appearance-none bg-color3bsdarker border border-color3bs focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Your best email…" aria-label="Your best email…" />
+                <input type="email" className="w-full appearance-none bg-color3bsdarker border border-color3bs focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Escribe tu correo…" aria-label="Escribe tu correo…" />
                 <a className="btn text-color3bs bg-white hover:bg-purple-100 shadow" href="#0">Subscribe</a>
               </div>
               {/* Success message */}
