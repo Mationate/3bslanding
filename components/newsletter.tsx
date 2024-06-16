@@ -31,10 +31,10 @@ export default function Newsletter() {
             <form className="w-full lg:w-1/2">
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
                 <input type="email" className="w-full appearance-none bg-color3bsdarker border border-color3bs focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Escribe tu correo…" aria-label="Escribe tu correo…" />
-                <a className="btn text-color3bs bg-white hover:bg-purple-100 shadow" href="#0">Subscribe</a>
+                <a className="btn text-color3bs bg-white hover:bg-purple-100 shadow" href="#0">Subscribirse</a>
               </div>
               {/* Success message */}
-              {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Thanks for subscribing!</p> */}
+              {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Estamos en contacto!</p> */}
             </form>
 
           </div>
