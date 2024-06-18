@@ -33,7 +33,7 @@ export default function Hero() {
                 <a className="btn text-white bg-color3bs hover:bg-color3bsdarker w-full mb-4 sm:w-auto sm:mb-0" href="https://www.3bslab.com">Entrar</a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Aprende más</a>
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4 scroll-smooth " href="#features">Aprende más</a>
               </div>
             </div>
           </div>

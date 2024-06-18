@@ -1,5 +1,25 @@
+"use client"
+
+import { useState } from "react";
+import {  toast } from 'react-toastify';
+
+import jsonp from 'jsonp';
+
+
 export default function Newsletter() {
-  return (
+  const [email, setEmail] = useState('');
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const url = 'https://3bslab.us18.list-manage.com/subscribe/post?u=b15e5abb2a0f771d6db505042&id=9f3f7eafd2';
+    jsonp(`${url}&EMAIL=${email}`, { param: 'c' }, (err, data) => {
+      if (err) {
+        toast.error('Hubo un error al suscribirse.');
+      } else {
+        toast.success('¡Gracias por unirte a 3BSLab! 💈');
+      }
+    });
+  };
+  return ( 
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
@@ -28,10 +48,10 @@ export default function Newsletter() {
             </div>
 
             {/* CTA form */}
-            <form className="w-full lg:w-1/2">
+            <form method="POST" className="w-full lg:w-1/2" onSubmit={onSubmit}>
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
-                <input type="email" className="w-full appearance-none bg-color3bsdarker border border-color3bs focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Escribe tu correo…" aria-label="Escribe tu correo…" />
-                <a className="btn text-color3bs bg-white hover:bg-purple-100 shadow" href="#0">Subscribirse</a>
+                <input name="EMAIL" type="email" required onChange={(e)=> setEmail(e.target.value)} className="w-full appearance-none bg-color3bsdarker border border-color3bs focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Escribe tu correo…" aria-label="Escribe tu correo…" />
+                <button type="submit" className=" text-color3bs bg-white hover:bg-purple-100 shadow">Subscribirse</button>
               </div>
               {/* Success message */}
               {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Estamos en contacto!</p> */}
