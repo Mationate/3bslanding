@@ -46,7 +46,7 @@ export default function Features() {
                 </g>
               </svg>
               <h4 className="h4 mb-2">Aprendizaje</h4>
-              <p className="text-lg text-gray-400 text-center">Programas de formación integral en áreas de la Barbería. Desde lo básico a la formación de tu propia Barbería.</p>
+              <p className="text-lg text-gray-400 text-center">Programas de formación integral en áreas de la Barbería y otras áreas del Servicio a las Personas. Vamos desde  lo básico a la creación de tu propio negocio.</p>
             </div>
 
             {/* 4th item */}
@@ -86,7 +86,7 @@ export default function Features() {
                 </g>
               </svg>
               <h4 className="h4 mb-2">Desafíos</h4>
-              <p className="text-lg text-gray-400 text-center">Se parte de la comunidad de desafíos de Barberos, crea, comparte y recibe feedback a través de los Talent Barber.</p>
+              <p className="text-lg text-gray-400 text-center">Sé parte de la comunidad de desafios de Barberos, crea, comparte y recibe feedback a través de los Barber Talent!.</p>
             </div>
 
           </div>
