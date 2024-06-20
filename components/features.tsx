@@ -6,7 +6,7 @@ export default function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">Qué ofrecemos en esta plataforma</h2>
+            <h2 className="h2 mb-4">Qué encontrarás en esta plataforma</h2>
             <p className="text-xl text-gray-400">Del corte al negocio, de la marca personal a crear tu propio camino.</p>
           </div>
 

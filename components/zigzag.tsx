@@ -3,7 +3,7 @@ import Image from 'next/image'
 import BusinesBarber from '@/public/images/19.png'
 import MarcaPersonal from '@/public/images/16.png'
 import Tendencias from '@/public/images/9.png'
-import Fundamentos from '@/public/images/4.png'
+import Fundamentos from '@/public/images/5a.png'
 
 export default function Zigzag() {
   return (

@@ -10,9 +10,6 @@ interface ModalVideoProps {
   thumbWidth: number
   thumbHeight: number
   thumbAlt: string
-  video: string
-  videoWidth: number
-  videoHeight: number
 }
 
 export default function ModalVideo({
@@ -20,9 +17,6 @@ export default function ModalVideo({
   thumbWidth,
   thumbHeight,
   thumbAlt,
-  video,
-  videoWidth,
-  videoHeight,
 }: ModalVideoProps) {
   const [modalOpen, setModalOpen] = useState<boolean>(false)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -75,16 +69,13 @@ export default function ModalVideo({
             leave="ttransition ease-out duration-200"
             leaveFrom="oopacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
-          >
+            >
             <div className="max-w-6xl mx-auto h-full flex items-center">
-              <Dialog.Panel className="w-full max-h-full aspect-video bg-black overflow-hidden">
-                <video ref={videoRef} width={videoWidth} height={videoHeight} loop controls controlsList='nodownload'>
-                  <source src={video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+              <Dialog.Panel className="w-full max-h-full aspect-[16/9] bg-black overflow-hidden">
+                <iframe className="absolute top-0 left-0 w-full h-full p-16" src="https://player.vimeo.com/video/962765233?autoplay=1" onEnded={() => setModalOpen(false)} frameBorder="0" allow="autoplay;  picture-in-picture" allowFullScreen></iframe>
               </Dialog.Panel>
             </div>
-          </Transition.Child>
+            </Transition.Child>
           {/* End: Modal dialog */}
 
         </Dialog>
