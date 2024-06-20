@@ -21,14 +21,17 @@ export default function ModalVideo({
   const [modalOpen, setModalOpen] = useState<boolean>(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
+  const handleClose = () => {
+    setModalOpen(false)
+  }
+
   return (
     <div>
-
       {/* Video thumbnail */}
       <div>
         <div className="relative flex justify-center items-center" data-aos="fade-up" data-aos-delay="200">
           <Image src={thumb} width={thumbWidth} height={thumbHeight} alt={thumbAlt} />
-          <button className="absolute group" onClick={() => { setModalOpen(true) }} aria-label="Watch the video">
+          <button className="absolute group" onClick={() => setModalOpen(true)} aria-label="Watch the video">
             <svg className="w-16 h-16 sm:w-20 sm:h-20 hover:opacity-75 transition duration-150 ease-in-out" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient x1="78.169%" y1="9.507%" x2="24.434%" y2="90.469%" id="a">
@@ -45,42 +48,51 @@ export default function ModalVideo({
       {/* End: Video thumbnail */}
 
       <Transition show={modalOpen} as={Fragment} afterEnter={() => videoRef.current?.play()}>
-        <Dialog initialFocus={videoRef} onClose={() => setModalOpen(false)}>
-
-          {/* Modal backdrop */}
+        <Dialog
+          initialFocus={videoRef}
+          onClose={handleClose}
+          className="fixed inset-0 z-[99999] overflow-hidden flex items-center justify-center"
+        >
           <Transition.Child
-            className="fixed inset-0 z-[99999] bg-black bg-opacity-75 transition-opacity"
+            as={Fragment}
             enter="transition ease-out duration-200"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="transition ease-out duration-100"
+            leave="transition ease-in duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            aria-hidden="true"
-          />
-          {/* End: Modal backdrop */}
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-75" />
+          </Transition.Child>
 
-          {/* Modal dialog */}
           <Transition.Child
-            className="fixed inset-0 z-[99999] overflow-hidden flex items-center justify-center transform px-4 sm:px-6"
+            as={Fragment}
             enter="transition ease-out duration-200"
             enterFrom="opacity-0 scale-95"
             enterTo="opacity-100 scale-100"
-            leave="ttransition ease-out duration-200"
-            leaveFrom="oopacity-100 scale-100"
+            leave="transition ease-in duration-100"
+            leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
-            >
-            <div className="max-w-6xl mx-auto h-full flex items-center">
-              <Dialog.Panel className="w-full max-h-full aspect-[16/9] bg-black overflow-hidden">
-                <iframe className="absolute top-0 left-0 w-full h-full p-16" src="https://player.vimeo.com/video/962765233?autoplay=1" onEnded={() => setModalOpen(false)} frameBorder="0" allow="autoplay;  picture-in-picture" allowFullScreen></iframe>
-              </Dialog.Panel>
-            </div>
-            </Transition.Child>
-          {/* End: Modal dialog */}
-
+          >
+            <Dialog.Panel className="w-full max-w-6xl mx-auto h-auto flex items-center justify-center bg-black relative">
+              {/* <button
+                onClick={handleClose}
+                className="absolute top-0 left-0 m-4 bg-white text-black px-2 py-1 rounded z-10"
+              >
+                CERRAR
+              </button> */}
+              <iframe
+                className="w-full h-full aspect-video"
+                src="https://player.vimeo.com/video/962765233?autoplay=1"
+                onEnded={() => setModalOpen(false)}
+                frameBorder="0"
+                allow="autoplay; picture-in-picture"
+                allowFullScreen
+              />
+            </Dialog.Panel>
+          </Transition.Child>
         </Dialog>
       </Transition>
-
     </div>
   )
 }
