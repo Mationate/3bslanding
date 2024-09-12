@@ -52,7 +52,7 @@ export default function Pricing() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4">Conoce los beneficios de suscribirse en 3BSLab</h2>
-            <p className="text-xl text-gray-400">Crea tu cuenta, elige un periodo de membresía y tendrás todo el contenido disponible en nun sólo pago.</p>
+            <p className="text-xl text-gray-400">Crea tu cuenta, elige un periodo de membresía y tendrás todo el contenido disponible en un sólo pago.</p>
           </div>
 
           <div className="">
