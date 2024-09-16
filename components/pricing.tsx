@@ -81,30 +81,31 @@ export default function Pricing() {
                     </div>
                     <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
                         <PeriodRadioButtons
-                            subscriptionType={subscriptionType} 
-                            handleSubscriptionChange={handleSubscriptionChange} 
+                            subscriptionType={subscriptionType}
+                            handleSubscriptionChange={handleSubscriptionChange}
                         />
                         <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
                             <div className="mx-auto max-w-xs px-6">
-                                <p className="text-base font-semibold text-gray-600">Por solo</p>
-                                <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                                    <span className="text-2xl font-medium line-through text-gray-500">
-                                        ${subscriptionPrices[subscriptionType]}
-                                    </span>
-                                    <span className="text-5xl font-bold tracking-tight text-gray-900">
-                                        ${discountedPrices[subscriptionType]}
-                                    </span>
-                                    <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">
-                                        USD cada {subscriptionType === 'Anual' ? 'Año' : subscriptionType}
-                                    </span>
-                                </p>
-                                 {/* Badge de descuento */}
-                                <div className="mt-4 inline-block rounded-full bg-color3bs px-3 py-1 text-sm font-semibold text-white">
-                                  ¡Descuento de lanzamiento!
-                                </div>
+                            <p className="text-base font-semibold text-gray-600">Por solo</p>
+                            <p className="mt-6 flex items-baseline justify-start gap-x-1">
+                                <span className="text-2xl font-medium line-through text-gray-500">
+                                ${subscriptionPrices[subscriptionType]}
+                                </span>
+                                <span className="text-5xl font-bold tracking-tight text-gray-900 whitespace-nowrap">
+                                ${discountedPrices[subscriptionType]}
+                                </span>
+                                <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">
+                                USD cada {subscriptionType === 'Anual' ? 'Año' : subscriptionType}
+                                </span>
+                            </p>
+                            {/* Badge de descuento */}
+                            <div className="mt-4 inline-block rounded-full bg-color3bs px-3 py-1 text-sm font-semibold text-white">
+                                ¡Descuento de lanzamiento!
+                            </div>
                             </div>
                         </div>
-                    </div>
+                        </div>
+
                 </div>
             </div>
         </div>
