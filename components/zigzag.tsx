@@ -30,7 +30,7 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <div className="font-architects-daughter text-xl text-color3bs mb-2">More speed. Less spend</div>
+                  <div className="font-architects-daughter text-xl text-color3bs mb-2">Videos explicativos</div>
                   <h3 className="h3 mb-3">Fundamentos de Corte</h3>
                   <p className="text-xl text-gray-400 mb-4">Curso de fundamentos de corte para que te inicies en el mundo de la Barbería.</p>
                   <ul className="text-lg text-gray-400 -mb-2">
@@ -66,7 +66,7 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
-                  <div className="font-architects-daughter text-xl text-color3bs mb-2">More speed. Less spend</div>
+                  <div className="font-architects-daughter text-xl text-color3bs mb-2">Demostraciones en video</div>
                   <h3 className="h3 mb-3">Tendencias</h3>
                   <p className="text-xl text-gray-400 mb-4">Descubre y aprende como se crean los cortes de Tendencia, práctico y detallado.</p>
                   <ul className="text-lg text-gray-400 -mb-2">
@@ -102,7 +102,7 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-right">
                 <div className="md:pr-4 lg:pr-12 xl:pr-16">
-                  <div className="font-architects-daughter text-xl text-color3bs mb-2">More speed. Less spend</div>
+                  <div className="font-architects-daughter text-xl text-color3bs mb-2">Programa formativo</div>
                   <h3 className="h3 mb-3">Marca Personal</h3>
                   <p className="text-xl text-gray-400 mb-4">Crea tu marca personal, define tu estilo y desarrolla una carrera que te lleve a lo más alto.</p>
                   <ul className="text-lg text-gray-400 -mb-2">
@@ -138,7 +138,7 @@ export default function Zigzag() {
               {/* Content */}
               <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6" data-aos="fade-left">
                 <div className="md:pl-4 lg:pl-12 xl:pl-16">
-                  <div className="font-architects-daughter text-xl text-color3bs mb-2">More speed. Less spend</div>
+                  <div className="font-architects-daughter text-xl text-color3bs mb-2">Programa formativo</div>
                   <h3 className="h3 mb-3">Business Barber</h3>
                   <p className="text-xl text-gray-400 mb-4">Quieres Emprender?. Sigue estos consejos para abrir tu propia Barbería.</p>
                   <ul className="text-lg text-gray-400 -mb-2">
