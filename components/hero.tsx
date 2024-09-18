@@ -1,5 +1,6 @@
 import ModalVideo from '@/components/modal-video'
 import VideoThumb from '@/public/images/Fondo_video_Landing.png'
+import { CircleArrowDown } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -32,8 +33,14 @@ export default function Hero() {
               <div data-aos="fade-up" data-aos-delay="400">
                 <a className="btn text-white bg-color3bs hover:bg-color3bsdarker w-full mb-4 sm:w-auto sm:mb-0" href="https://www.3bslab.com">Entrar</a>
               </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4 scroll-smooth " href="#features">Aprende más</a>
+              <div data-aos="fade-up" data-aos-delay="600" className="flex items-center justify-center space-x-2 cursor-pointer">
+                <a className="text-white text-lg hover:underline ml-4" href="#features">
+                  Aprende más
+                </a>
+                <div className="flex flex-col items-center">
+                  <CircleArrowDown className='w-6 h-6 text-color3bs'/>
+
+                </div>
               </div>
             </div>
           </div>
