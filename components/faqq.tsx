@@ -15,14 +15,14 @@ const FAQItem = ({ item }: { item: FAQItem }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="border-b border-gray-200 py-4">
+    <div className="border-b border-color3bs py-4">
       <button
         className="flex justify-between items-center w-full text-left"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="text-xl font-medium text-white">{item.question}</span>
         <ChevronDownIcon
-          className={`w-5 h-5 text-white transition-transform duration-300 ${
+          className={`w-5 h-5 text-color3bs transition-transform duration-300 ${
             isOpen ? 'transform rotate-180' : ''
           }`}
         />
