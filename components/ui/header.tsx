@@ -1,44 +1,71 @@
-import Link from 'next/link'
-import MobileMenu from './mobile-menu'
-import Image from 'next/image'
+"use client"
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
+  const [showEnterButton, setShowEnterButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const featuresElement = document.getElementById('features');
+      if (featuresElement) {
+        const { top } = featuresElement.getBoundingClientRect();
+        setShowEnterButton(top <= 0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="absolute w-full z-30 flex justify-center">
+    <header
+      className="fixed top-0 w-full z-30 bg-black bg-opacity-5 backdrop-blur-md shadow-md transition-all duration-500"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Site branding */}
-          <div className="shrink-0 mr-4 mt-12">
-            {/* Logo */}
-            <Link href="/" className="block" aria-label="Cruip">
-              <Image src="/images/logo-dark.svg" alt="Logo" width={32} height={32} className="w-28 h-28 fill-current" />
-            </Link>
-          </div>
+        <div className="relative flex items-center justify-center h-20 mt-4">
+          {/* Logo siempre visible y centrado */}
+          <Link href="/" aria-label="Cruip">
+            <Image
+              src="/images/logo-dark.svg"
+              alt="Logo"
+              width={64}
+              height={64}
+              className="w-28 h-28"
+            />
+          </Link>
 
-          {/* Desktop navigation */}
-            {/* Desktop sign in links */}
-          {/* <nav className="hidden md:flex md:grow">
-            <ul className="flex grow justify-end flex-wrap items-center">
-              <li>
-                <Link
-                  href="/signin"
-                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Sign in
-                </Link>
-              </li>
-              <li>
-                <Link href="/signup" className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
-                  Sign up
-                </Link>
-              </li>
-            </ul>
-          </nav> */}
-
-          {/* <MobileMenu /> */}
-
+          {/* Botón Entrar visible al llegar a Features */}
+          {showEnterButton && (
+            <div className="absolute right-0 fade-in-animation">
+              <a
+                className="btn text-white bg-color3bs hover:bg-color3bsdarker"
+                href="https://www.3bslab.com"
+              >
+                Entrar
+              </a>
+            </div>
+          )}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .fade-in-animation {
+          animation: fadeIn 1s ease-in-out;
+        }
+      `}</style>
     </header>
-  )
+  );
 }
