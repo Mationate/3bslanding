@@ -100,7 +100,7 @@ export default function Pricing() {
                             </p>
                             {/* Badge de descuento */}
                             <div className="mt-4 inline-block rounded-full bg-color3bs px-3 py-1 text-sm font-semibold text-white">
-                                ¡Descuento de lanzamiento!
+                            Descuento válido hasta el 20 de octubre
                             </div>
                             </div>
                         </div>
