@@ -31,7 +31,7 @@ export default function Hero() {
             </p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
-                <a className="btn text-white bg-color3bs hover:bg-color3bsdarker w-full mb-4 sm:w-auto sm:mb-0" href="https://www.academia.3bslab.com">Entrar</a>
+                <a className="btn text-white bg-color3bs hover:bg-color3bsdarker w-full mb-4 sm:w-auto sm:mb-0" href="https://academia.3bslab.com">Entrar</a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600" className="flex items-center justify-center space-x-2 cursor-pointer">
                 <a className="text-white text-lg hover:underline ml-4" href="#features">
