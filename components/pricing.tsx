@@ -20,7 +20,7 @@ const subscriptionPrices = {
 };
 
 const discountedPrices = {
-    Mes: 24,
+    Mes: 25,
     Trimestre: 75,
     Semestre: 150,
     Anual: 300,
