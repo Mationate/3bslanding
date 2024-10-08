@@ -51,7 +51,7 @@ export default function Newsletter() {
             <form method="POST" className="w-full lg:w-1/2" onSubmit={onSubmit}>
               <div className="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none">
                 <input name="EMAIL" type="email" required onChange={(e)=> setEmail(e.target.value)} className="w-full appearance-none bg-color3bsdarker border border-color3bs focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-white placeholder-white" placeholder="Escribe tu correo…" aria-label="Escribe tu correo…" />
-                <button type="submit" className=" text-color3bs bg-white hover:bg-purple-100 shadow">Subscribirse</button>
+                <button type="submit" className=" text-color3bs bg-white hover:bg-purple-100 shadow">Enviar</button>
               </div>
               {/* Success message */}
               {/* <p className="text-center lg:text-left lg:absolute mt-2 opacity-75 text-sm">Estamos en contacto!</p> */}

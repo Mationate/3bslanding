@@ -39,12 +39,12 @@ export default function Header() {
           {/* Botón Entrar visible al llegar a Features */}
           {showEnterButton && (
             <div className="absolute right-0 fade-in-animation">
-              {/* <a
+              <a
                 className="btn text-white bg-color3bs hover:bg-color3bsdarker"
                 href="https://www.academia.3bslab.com"
               >
                 Entrar
-              </a> */}
+              </a>
             </div>
           )}
         </div>
