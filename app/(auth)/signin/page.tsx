@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Sign In - Open PRO',
-  description: 'Page description',
-}
+  title: '3BSLab - Aprende, Aplica y Triunfa',
+  description: 'Plataforma de aprendizaje y experiencia. Queremos que descubras, aprendas, apliques y triunfes en el mundo de la Barbería - Te ayudamos más allá del corte!!',
+};
 
 import Link from 'next/link'
 
