@@ -94,7 +94,7 @@ export default function Features() {
                 </g>
               </svg> */}
               <h4 className="h4 mb-2">Desafíos</h4>
-              <p className="text-lg text-gray-400 text-center">Hemos diseñado espacios para compartir desafíos personales y profesionales. Queremos que muestres tus talentos y tu arte. ecibe feedback participando en  nuestros Barber Talent!.</p>
+              <p className="text-lg text-gray-400 text-center">Hemos diseñado espacios para compartir desafíos personales y profesionales. Queremos que muestres tus talentos y tu arte. Recibe feedback participando en  nuestros Barber Talent!.</p>
             </div>
 
           </div>
