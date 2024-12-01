@@ -3,7 +3,6 @@
 import { Check, Sparkles } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import FestiveBackground from './festive-bg';
 
 const includedFeatures = [
   'Acceso a cursos completos',
@@ -27,7 +26,6 @@ export default function Pricing() {
 
   return (
     <section className="relative bg-gradient-to-b from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden min-h-screen">
-      <FestiveBackground />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="py-12 md:py-20">
           {/* Section header */}
