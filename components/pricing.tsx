@@ -100,15 +100,7 @@ export default function Pricing() {
                 </motion.div>
               </div>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="mt-8 flex justify-center items-center text-yellow-400"
-            >
-              <Sparkles className="h-8 w-8 mr-2 animate-pulse" />
-              <p className="text-2xl font-bold">¡Oferta por tiempo extremadamente limitado!</p>
-            </motion.div>
+
           </div>
         </div>
       </div>
