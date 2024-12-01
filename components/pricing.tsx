@@ -1,30 +1,19 @@
 "use client";
-import { Check } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { PeriodRadioButtons } from './period-radio-buttons';
 
-type SubscriptionType = 'Mes' | 'Trimestre' | 'Semestre' | 'Anual';
+import { Check, Sparkles } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import FestiveBackground from './festive-bg';
 
 const includedFeatures = [
   'Acceso a cursos completos',
   'Actualizaciones periódicas y nuevos cursos',
   'Acceso exclusivo a contenido como podcasts, entrevistas, demostraciones y más',
+  'Soporte prioritario',
+  'Certificados de finalización',
 ];
 
-const subscriptionPrices = {
-  Mes: 42,
-  Trimestre: 110,
-  Semestre: 210,
-  Anual: 390,
-};
-
 export default function Pricing() {
-  const [subscriptionType, setSubscriptionType] = useState<SubscriptionType>('Mes');
-
-  const handleSubscriptionChange = (event: any) => {
-    setSubscriptionType(event.target.value);
-  };
-
   // THIS FIX HYDRATION ERROR
   const [isMounted, setIsMounted] = useState(false);
 
@@ -37,65 +26,96 @@ export default function Pricing() {
   }
 
   return (
-    <section>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-16 border-t border-gray-800">
-
+    <section className="relative bg-gradient-to-b from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden min-h-screen">
+      <FestiveBackground />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="py-12 md:py-20">
           {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">Conoce los beneficios de suscribirse en 3BSLab</h2>
-            <p className="text-xl text-gray-400">Crea tu cuenta, elige un periodo de membresía y tendrás todo el contenido disponible en un sólo pago.</p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl mx-auto text-center pb-12 md:pb-20"
+          >
+            <h2 className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
+              ¡Black Friday en 3BSLab!
+            </h2>
+            <p className="text-2xl text-gray-300">Desbloquea tu potencial tecnológico con un precio irresistible.</p>
+          </motion.div>
 
-          <div className="">
-            <div className="mx-auto max-w-7xl">
-              <div className="mx-auto max-w-2xl rounded-3xl ring-1 ring-gray-200 lg:mx-0 lg:flex lg:max-w-none">
-                <div className="p-8 sm:p-10 lg:flex-auto">
-                  <h3 className="text-2xl font-bold tracking-tight">Suscripción por periodos</h3>
-                  <p className="mt-6 text-base leading-7">
-                    Elige el periodo de suscripción que mejor se adapte a tus necesidades y disfruta de todo el contenido exclusivo que 3BSLab tiene para ofrecer.
-                  </p>
-                  <div className="mt-10 flex items-center gap-x-4">
-                    <h4 className="flex-none text-sm font-semibold leading-6 text-color3bs">Obtendrás:</h4>
-                    <div className="h-px flex-auto bg-gray-100" />
-                  </div>
-                  <ul
-                    role="list"
-                    className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 dark:text-gray-400 sm:grid-cols-2 sm:gap-6"
-                  >
-                    {includedFeatures.map((feature) => (
-                      <li key={feature} className="flex gap-x-3">
-                        <Check className="h-6 w-5 flex-none text-color3bs" aria-hidden="true" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+          <div className="mx-auto max-w-5xl">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden lg:flex"
+            >
+              <div className="p-8 sm:p-10 lg:flex-auto">
+                <h3 className="text-3xl font-bold tracking-tight text-color3bs">Suscripción Mensual Premium</h3>
+                <p className="mt-6 text-lg leading-7 text-gray-300">
+                  Aprovecha esta oferta exclusiva de Black Friday y transforma tu carrera con acceso ilimitado a nuestro contenido de élite.
+                </p>
+                <div className="mt-10 flex items-center gap-x-4">
+                  <h4 className="flex-none text-sm font-semibold leading-6 text-color3bs">Beneficios Exclusivos:</h4>
+                  <div className="h-px flex-auto bg-gradient-to-r from-color3bs via-purple-500 to-pink-500" />
                 </div>
-                <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                  <PeriodRadioButtons
-                    subscriptionType={subscriptionType}
-                    handleSubscriptionChange={handleSubscriptionChange}
-                  />
-                  <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                    <div className="mx-auto max-w-xs px-6">
-                      <p className="text-base font-semibold text-gray-600">Por solo</p>
-                      <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                        <span className="text-5xl font-bold tracking-tight text-gray-900">
-                          ${subscriptionPrices[subscriptionType]}
-                        </span>
-                        <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">
-                          USD cada {subscriptionType === 'Anual' ? 'Año' : subscriptionType}
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <ul
+                  role="list"
+                  className="mt-8 grid grid-cols-1 gap-4 text-base leading-6 text-gray-300 sm:grid-cols-2 sm:gap-6"
+                >
+                  {includedFeatures.map((feature, index) => (
+                    <motion.li
+                      key={feature}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="flex gap-x-3 items-center"
+                    >
+                      <Check className="h-6 w-5 flex-none text-color3bs" aria-hidden="true" />
+                      {feature}
+                    </motion.li>
+                  ))}
+                </ul>
               </div>
-            </div>
+              <div className="p-8 lg:w-full lg:max-w-md lg:flex-shrink-0">
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="rounded-2xl bg-gradient-to-br from-gray-900 via-purple-800 to-gray-900 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16"
+                >
+                  <div className="mx-auto max-w-xs px-8">
+                    <p className="text-base font-semibold text-gray-300">Precio Black Friday</p>
+                    <motion.p
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ type: "spring", stiffness: 300, delay: 0.2 }}
+                      className="mt-6 flex items-baseline justify-center gap-x-2"
+                    >
+                      <span className="text-7xl font-extrabold tracking-tight text-color3bs">$19</span>
+                      <span className="text-2xl font-semibold leading-6 tracking-wide text-gray-300">USD / mes</span>
+                    </motion.p>
+                    <p className="mt-3 text-sm text-gray-300">¡Para siempre!</p>
+                    <p className="mt-6 text-xs leading-5 text-gray-400">
+                      Facturación mensual. Cancela cuando quieras.
+                    </p>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="mt-8 flex justify-center items-center text-yellow-400"
+            >
+              <Sparkles className="h-8 w-8 mr-2 animate-pulse" />
+              <p className="text-2xl font-bold">¡Oferta por tiempo extremadamente limitado!</p>
+            </motion.div>
           </div>
-
         </div>
       </div>
+      <div className="absolute inset-0 bg-[url(/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
     </section>
   );
 }
+
