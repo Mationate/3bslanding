@@ -36,7 +36,7 @@ export default function Pricing() {
             className="max-w-3xl mx-auto text-center pb-12 md:pb-20"
           >
             <h2 className="text-5xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
-              ¡Black Friday en 3BSLab!
+              ¡Black Week en 3BSLab!
             </h2>
             <p className="text-2xl text-gray-300">Desbloquea tu potencial tecnológico con un precio irresistible.</p>
           </motion.div>
@@ -51,7 +51,7 @@ export default function Pricing() {
               <div className="p-8 sm:p-10 lg:flex-auto">
                 <h3 className="text-3xl font-bold tracking-tight text-color3bs">Suscripción Mensual Premium</h3>
                 <p className="mt-6 text-lg leading-7 text-gray-300">
-                  Aprovecha esta oferta exclusiva de Black Friday y transforma tu carrera con acceso ilimitado a nuestro contenido de élite.
+                  Aprovecha esta oferta exclusiva de Black Week y transforma tu carrera con acceso ilimitado a nuestro contenido de élite.
                 </p>
                 <div className="mt-10 flex items-center gap-x-4">
                   <h4 className="flex-none text-sm font-semibold leading-6 text-color3bs">Beneficios Exclusivos:</h4>
@@ -82,7 +82,7 @@ export default function Pricing() {
                   className="rounded-2xl bg-gradient-to-br from-gray-900 via-purple-800 to-gray-900 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16"
                 >
                   <div className="mx-auto max-w-xs px-8">
-                    <p className="text-base font-semibold text-gray-300">Precio Black Friday</p>
+                    <p className="text-base font-semibold text-gray-300">Precio Black Week</p>
                     <motion.p
                       initial={{ scale: 0.5, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
