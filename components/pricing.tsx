@@ -9,7 +9,6 @@ const includedFeatures = [
   'Actualizaciones periódicas y nuevos cursos',
   'Acceso exclusivo a contenido como podcasts, entrevistas, demostraciones y más',
   'Soporte prioritario',
-  'Certificados de finalización',
 ];
 
 export default function Pricing() {
